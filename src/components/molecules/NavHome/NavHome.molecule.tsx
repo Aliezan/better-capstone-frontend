@@ -1,17 +1,15 @@
-// import React from "react"
-// import ProfileButtton from "../../atoms/ProfileButton/ProfileButtton.atom"
-// import line from "../../../assets/line.png"
-// import { KeluarButton } from "../../atoms"
+import React, { FC } from 'react';
+import Image from 'next/image';
+import ProfileButtton from '../../atoms/ProfileButton/ProfileButtton.atom';
+import { KeluarButton } from '../../atoms';
 
-// function NavHome({ onClick, dataAdmin, imageIndex }) {
-//     return (
-//         <div className="flex items-center gap-[25px] pt-[2px] " id="navbarHome">
-//             <ProfileButtton dataAdmin={dataAdmin} imageIndex={imageIndex} />
-//             <img src={line} alt="" className="h-6" />
+const NavHome: FC = () => (
+  <div className='flex items-center gap-[25px] pt-[2px] ' id='navbarHome'>
+    <ProfileButtton />
+    <Image src='/line.png' width={24} height={24} alt='' className='h-6' />
 
-//             <KeluarButton onClick={onClick} />
-//         </div>
-//     )
-// }
+    <KeluarButton />
+  </div>
+);
 
-// export default NavHome
+export default NavHome;

@@ -2,7 +2,6 @@
 
 import React, { FC } from 'react';
 import Image from 'next/image';
-import Trash from '../../../assets/Trash1.svg';
 
 interface DeleteButtonProps {
   handleClick: () => void;
@@ -17,7 +16,7 @@ const DeleteButton: FC<DeleteButtonProps> = ({ handleClick }) => (
       onClick={handleClick}
     >
       <Image
-        src={Trash}
+        src='/Trash1.svg'
         alt='Trash Logo'
         id='TrashLogo'
         className='ml-[24px] mt-[6px] mb-[8px]'

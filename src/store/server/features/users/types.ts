@@ -8,3 +8,8 @@ export interface User {
   online_status: boolean;
   img_url: string;
 }
+
+export interface MutationParams {
+  id: string;
+  duration: string;
+}

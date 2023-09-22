@@ -2,12 +2,6 @@
 
 import React, { FC } from 'react';
 import Image from 'next/image';
-import MuteUser from '../../../assets/mute.svg';
-import BlockUser from '../../../assets/block-user.svg';
-import UnmuteUser from '../../../assets/unmute.svg';
-import UnblockUser from '../../../assets/unblock-user.svg';
-import Eye from '../../../assets/Eye.svg';
-import Trash from '../../../assets/Trash1.svg';
 
 interface ButtonProps {
   img: string;
@@ -29,12 +23,12 @@ const Button: FC<ButtonProps> = ({
   id,
 }) => {
   const imgCondition: ImageCondition = {
-    mute: MuteUser,
-    block: BlockUser,
-    unmute: UnmuteUser,
-    unblock: UnblockUser,
-    eye: Eye,
-    trash: Trash,
+    mute: '/mute.svg',
+    block: '/block-user.svg',
+    unmute: '/unmute.svg',
+    unblock: '/unblock-user.svg',
+    eye: '/Eye.svg',
+    trash: '/Trash1.svg',
   };
 
   return (

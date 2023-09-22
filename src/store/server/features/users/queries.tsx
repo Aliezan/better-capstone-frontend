@@ -1,5 +1,3 @@
-'use client';
-
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import { User } from './types';
@@ -14,7 +12,7 @@ async function getUser() {
 const useGetUser = () =>
   useQuery({
     queryKey: ['user'],
-    queryFn: () => getUser(),
+    queryFn: getUser,
   });
 
 export default useGetUser;

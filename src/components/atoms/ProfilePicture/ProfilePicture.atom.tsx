@@ -1,7 +1,5 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
-import aman from '../../../assets/aman.svg';
-import notAman from '../../../assets/notAman.svg';
 
 interface ProfilePictureProps {
   isUserBlocked: boolean;
@@ -21,7 +19,7 @@ const ProfilePicture: FC<ProfilePictureProps> = ({
       className='h-[49px] w-[50px] rounded-[100px]'
     />
     <Image
-      src={isUserBlocked || isUserMuted ? notAman : aman}
+      src={isUserBlocked || isUserMuted ? '/notAman.svg' : '/aman.svg'}
       alt='aman'
       className='absolute bottom-0 -right-1'
     />

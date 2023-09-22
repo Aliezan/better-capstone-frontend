@@ -2,7 +2,6 @@
 
 import React, { FC } from 'react';
 import Image from 'next/image';
-import DenyVector from '../../../assets/deny.svg';
 
 interface DenyButtonProps {
   onClick: () => void;
@@ -12,7 +11,7 @@ const DenyButton: FC<DenyButtonProps> = ({ onClick }) => (
   <div className='w-[60px] h-[69px]'>
     <button type='button' className='btn' id='buttontolak' onClick={onClick}>
       <Image
-        src={DenyVector}
+        src='/deny.svg'
         alt='Deny Logo'
         id='DenyLogo'
         className='ml-[24px] mt-[6px] mb-[8px]'

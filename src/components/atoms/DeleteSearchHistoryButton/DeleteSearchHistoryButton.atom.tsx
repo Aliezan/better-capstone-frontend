@@ -2,7 +2,6 @@
 
 import React, { FC } from 'react';
 import Image from 'next/image';
-import x from '../../../assets/x-cross.svg';
 
 interface DeleteSearchHistoryButtonProps {
   handleDeleteSearchHistory: () => void;
@@ -16,7 +15,7 @@ const DeleteSearchHistoryButton: FC<DeleteSearchHistoryButtonProps> = ({
     className='mr-[16px]'
     onClick={handleDeleteSearchHistory}
   >
-    <Image src={x} alt='delete history' />
+    <Image src='/x-cross.svg' alt='delete history' />
   </button>
 );
 

@@ -2,7 +2,6 @@
 
 import React, { FC } from 'react';
 import Image from 'next/image';
-import AcceptVector from '../../../assets/accept.svg';
 
 interface AcceptButtonProps {
   onClick: () => void;
@@ -12,7 +11,7 @@ const AcceptButton: FC<AcceptButtonProps> = ({ onClick }) => (
   <div className='w-[60px] h-[69px]'>
     <button type='button' className='btn' id='buttonterima' onClick={onClick}>
       <Image
-        src={AcceptVector}
+        src='/accept.svg'
         alt='Accept Logo'
         id='AcceptLogo'
         className='ml-[24px] mt-[6px] mb-[8px]'

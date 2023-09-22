@@ -1,46 +1,49 @@
-// import React from "react"
-// import { CardStats } from "../../molecules"
+'use client';
 
-// function HomeStats({
-//     onlineUsers,
-//     totalUsers,
-//     totalThread,
-//     totalThreadReport,
-// }) {
-//     return (
-//         <div>
-//             <div className="w-full flex justify-between items-center">
-//                 <CardStats
-//                     statsNumber={totalUsers}
-//                     statsTitle="Jumlah Pengguna"
-//                     Link="/manage-user/total"
-//                     hover
-//                     id="home-total"
-//                 />
-//                 <CardStats
-//                     statsNumber={onlineUsers}
-//                     statsTitle="Pengguna Online"
-//                     Link="/manage-user/online"
-//                     hover
-//                     id="home-online"
-//                 />
-//                 <CardStats
-//                     statsNumber={totalThread}
-//                     statsTitle="Jumlah Thread"
-//                     Link="/thread/manage"
-//                     hover
-//                     id="home-thread"
-//                 />
-//                 <CardStats
-//                     statsNumber={totalThreadReport}
-//                     statsTitle="Thread Yang Dilaporkan"
-//                     Link="/thread/report"
-//                     hover
-//                     id="home-report"
-//                 />
-//             </div>
-//         </div>
-//     )
-// }
+import React, { FC } from 'react';
+import { HomeViewModel } from '@/viewModel';
+import { CardStats } from '../../molecules';
 
-// export default HomeStats
+const HomeStats: FC = () => {
+  const viewModel = HomeViewModel();
+  return (
+    <div>
+      <div className='w-full flex flex-col sm:flex-row gap-3 justify-between items-center'>
+        <CardStats
+          className='flex-1'
+          statsNumber={viewModel.totalUsers}
+          statsTitle='Jumlah Pengguna'
+          page='/manage-user/total'
+          hover
+          id='home-total'
+        />
+        <CardStats
+          className='flex-1'
+          statsNumber={viewModel.onlineUsers}
+          statsTitle='Pengguna Online'
+          page='/manage-user/online'
+          hover
+          id='home-online'
+        />
+        <CardStats
+          className='flex-1'
+          statsNumber={viewModel.Threads?.length}
+          statsTitle='Jumlah Thread'
+          page='/thread/manage'
+          hover
+          id='home-thread'
+        />
+        <CardStats
+          className='flex-1'
+          statsNumber={viewModel.threadReport?.length}
+          statsTitle='Thread Yang Dilaporkan'
+          page='/thread/report'
+          hover
+          id='home-report'
+        />
+      </div>
+    </div>
+  );
+};
+
+export default HomeStats;

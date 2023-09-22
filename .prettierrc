@@ -6,5 +6,5 @@
   "printWidth": 80,
   "trailingComma": "all",
   "jsxSingleQuote": true,
-  "operatorLineBreak": "before"
+  "bracketSpacing": true
 }

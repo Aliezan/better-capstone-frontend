@@ -1,18 +1,22 @@
-// import React from 'react';
-// import { Bar } from 'react-chartjs-2';
+'use client';
 
-// function Chart({ data, options, chartExpand, toggleChart }) {
-//   return (
-//     <div
-//       className={`${
-//         chartExpand ? 'h-[440px]' : 'h-[340px]'
-//       } cursor-pointer transition-all`}
-//       onClick={toggleChart}
-//       id="chart"
-//     >
-//       <Bar options={options} data={data} />
-//     </div>
-//   );
-// }
+import React, { FC } from 'react';
+import { Bar } from 'react-chartjs-2';
+import { HomeViewModel } from '@/viewModel';
 
-// export default Chart;
+const Chart: FC = () => {
+  const viewModel = HomeViewModel();
+
+  return (
+    <div
+      className={`${
+        viewModel.chartExpand ? 'h-[440px]' : 'h-[340px]'
+      } cursor-pointer transition-all`}
+      onClick={viewModel.setChartExpand}
+      id='chart'
+    >
+      <Bar options={viewModel.options} data={viewModel.data} />
+    </div>
+  );
+};
+export default Chart;

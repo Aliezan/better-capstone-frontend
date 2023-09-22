@@ -12,7 +12,7 @@
 //                         ? "h-[514px] bg-white mt-[20px] px-[15px] py-[30px] w-[1180px] rounded-xl"
 //                         : "h-[514px] bg-white mt-[20px] px-[15px] py-[30px] w-[1210px] rounded-xl"
 //                 }>
-//                 <div className="justify-center items-center bg-white">
+//                 <div className="items-center justify-center bg-white">
 //                     <h1 className="text-center font-source-sans font-bold text-[24px]">
 //                         {state.title}
 //                     </h1>

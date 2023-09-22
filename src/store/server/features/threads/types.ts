@@ -1,10 +1,10 @@
-export interface Thread {
+export default interface Thread {
   accept_status: boolean;
   avatar: string;
   createdAt: string;
   deny_status: boolean;
   description: string;
-  id: number;
+  id: string;
   pending_status: boolean;
   tag: string;
   thread_paragraph: string;

@@ -1,14 +1,13 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
-import logo from '../../../assets/logo.png';
 
 interface LogoProps {
-  textLogo: 'black' | 'white';
+  textLogo?: 'black' | 'white';
 }
 
 const Logo: FC<LogoProps> = ({ textLogo }) => (
   <div className='flex items-center gap-[32px] pt-[1px] pl-[3px]' id='logo'>
-    <Image src={logo} alt='' className='w-14' />
+    <Image src='/logo.png' alt='logo' className='w-14 z-1' width='100' height='100' />
     <h3
       className={`${
         textLogo === 'black' ? 'text-black' : 'text-white'

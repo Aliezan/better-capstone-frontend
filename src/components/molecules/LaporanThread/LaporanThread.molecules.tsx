@@ -3,7 +3,7 @@
 // import { useLocation } from 'react-router-dom';
 // import { useStore } from '../../../zustand/zustand/store';
 
-// function LaporanThread() {
+// const LaporanThread = () => {
 //   const location = useLocation();
 //   const { report } = useStore((state) => state);
 //   const filterData = report.filter((list) => list.accept_status);
@@ -25,7 +25,7 @@
 //   return (
 //     <div
 //       id='container_middle'
-//       className='rounded-md mt-6 flex justify-center items-center w-full  h-24 bg-white shadow-lg'
+//       className='flex items-center justify-center w-full h-24 mt-6 bg-white rounded-md shadow-lg'
 //     >
 //       <div>
 //         <p
@@ -43,6 +43,6 @@
 //       </div>
 //     </div>
 //   );
-// }
+// };
 
 // export default LaporanThread;

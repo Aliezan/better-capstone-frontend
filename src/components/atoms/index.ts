@@ -12,3 +12,4 @@ export { default as AcceptButton } from './AcceptButton/AcceptButton.atom';
 export { default as DenyButton } from './DenyButton/DenyButton.atom';
 export { default as BackButton } from './BackButton/BackButton.atom';
 export { default as ProfilePicture } from './ProfilePicture/ProfilePicture.atom';
+export { default as LoginButton } from '@/components/atoms/LoginButton/LoginButton.atom';
